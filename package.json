@@ -1,0 +1,28 @@
+{
+	"name": "tidle-obsidian-plugin",
+	"version": "1.0.1",
+	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"main": "main.js",
+	"scripts": {
+		"build": "esbuild main.ts --bundle --platform=node --target=es2020 --external:obsidian --outfile=dist/main.js",
+		"copy": "node scripts/copy.js",
+		"dev": "npm run build && npm run copy"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^16.11.6",
+		"@typescript-eslint/eslint-plugin": "5.29.0",
+		"@typescript-eslint/parser": "5.29.0",
+		"builtin-modules": "3.3.0",
+		"esbuild": "0.17.3",
+		"obsidian": "latest",
+		"tslib": "2.4.0",
+		"typescript": "4.7.4"
+	},
+	"dependencies": {
+		"fs-extra": "^11.2.0",
+		"path": "^0.12.7"
+	}
+}

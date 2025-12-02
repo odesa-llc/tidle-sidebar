@@ -1,0 +1,9 @@
+.tidle-view-container {
+    padding: 0 !important; /* Remove padding */
+    height: 100% !important; /* Ensure the iframe fills the entire view */
+}
+.side-dock-ribbon-action[aria-label="Open Tidle"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

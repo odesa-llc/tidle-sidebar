@@ -1,0 +1,11 @@
+{
+	"id": "tidle-obsidian-plugin",
+	"name": "Tidle's Obsidian Plugin",
+	"version": "1.0.1",
+	"minAppVersion": "0.15.0",
+	"description": "Demonstrates some of the capabilities of the Tidle application.",
+	"author": "Tidle",
+	"authorUrl": "https://tidle.app",
+	"fundingUrl": "https://tidle.app/subscribe",
+	"isDesktopOnly": false
+}
