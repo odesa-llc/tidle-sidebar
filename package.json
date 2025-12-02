@@ -1,16 +1,15 @@
 {
 	"name": "tidle-obsidian-plugin",
-	"version": "1.0.1",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"version": "1.0.0",
 	"main": "main.js",
 	"scripts": {
-		"build": "esbuild main.ts --bundle --platform=node --target=es2020 --external:obsidian --outfile=dist/main.js",
-		"copy": "node scripts/copy.js",
-		"dev": "npm run build && npm run copy"
+		"build": "node esbuild.config.mjs",
+		"dev": "npm run build && npm run copy",
+		"version": "node version-bump.mjs"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "MIT",
+	"author": "Tidle",
+	"description": "Tidle sidebar panel for Obsidian.",
 	"devDependencies": {
 		"@types/node": "^16.11.6",
 		"@typescript-eslint/eslint-plugin": "5.29.0",
