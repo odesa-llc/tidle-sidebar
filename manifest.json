@@ -1,11 +1,10 @@
 {
-  "id": "tidle-obsidian-plugin",
+  "id": "tidle-sidebar",
   "name": "Tidle",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
   "description": "Tidle sidebar panel for obsidian.",
   "author": "Tidle",
   "authorUrl": "https://tidle.app",
-  "fundingUrl": "https://tidle.app/subscribe",
-  "isDesktopOnly": false
+  "isDesktopOnly": true
 }
