@@ -3,7 +3,7 @@
   "name": "Tidle",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
-  "description": "Tidle sidebar panel for obsidian.",
+  "description": "Tidle sidebar panel.",
   "author": "Tidle",
   "authorUrl": "https://tidle.app",
   "isDesktopOnly": true
