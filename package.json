@@ -1,5 +1,5 @@
 {
-	"name": "tidle-obsidian-plugin",
+	"name": "tidle-sidebar",
 	"version": "1.0.0",
 	"main": "main.js",
 	"scripts": {
