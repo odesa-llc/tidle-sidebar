@@ -1,8 +1,8 @@
 # Tidle for Obsidian
 
-Embed the Tidle task manager inside Obsidian so you can manage tasks alongside your notes.
+Embeds the Tidle task manager inside Obsidian so you can manage tasks alongside your notes and other plugins.
 
-This plugin opens the Tidle web app in an Obsidian pane using an embedded iframe.
+<img width="650" alt="tidle-sidebar-preview" src="https://github.com/user-attachments/assets/b949799b-b013-456f-a4ee-2b59a3c2d239" />
 
 ## Features (Obsidian)
 
