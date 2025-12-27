@@ -3,7 +3,7 @@ import { ItemView, Plugin, WorkspaceLeaf, addIcon } from "obsidian";
 export const VIEW_TYPE_TIDLE = "tidle-view";
 
 export default class TidlePlugin extends Plugin {
-  async onload() {
+  onload(): void {
     this.registerView(VIEW_TYPE_TIDLE, (leaf: WorkspaceLeaf) => new TidleView(leaf));
 
     addIcon(
@@ -18,23 +18,25 @@ export default class TidlePlugin extends Plugin {
       `
     );
 
-    const ribbonEl = this.addRibbonIcon("tidle-icon", "Open Tidle", () => {
-      this.activateView();
+    const ribbonEl = this.addRibbonIcon("tidle-icon", "Open sidebar", () => {
+      void this.activateView().catch(console.error);
     });
     ribbonEl.classList.add("tidle-ribbon-icon");
 
     this.addCommand({
       id: "open-tidle",
-      name: "Open Tidle",
-      callback: () => this.activateView(),
+      name: "Open sidebar",
+      callback: () => {
+        void this.activateView().catch(console.error);
+      },
     });
   }
 
-  async onunload() {
+  onunload(): void {
     this.app.workspace.getLeavesOfType(VIEW_TYPE_TIDLE).forEach((leaf) => leaf.detach());
   }
 
-  async activateView() {
+  private async activateView(): Promise<void> {
     const existingLeaves = this.app.workspace.getLeavesOfType(VIEW_TYPE_TIDLE);
 
     if (existingLeaves.length > 0) {
@@ -43,10 +45,13 @@ export default class TidlePlugin extends Plugin {
     }
 
     const leaf = this.app.workspace.getLeaf(true);
+
     await leaf.setViewState({
       type: VIEW_TYPE_TIDLE,
       active: true,
     });
+
+    this.app.workspace.revealLeaf(leaf);
   }
 }
 
@@ -65,7 +70,7 @@ class TidleView extends ItemView {
     return "Tidle";
   }
 
-  async onOpen() {
+  onOpen(): void {
     const container = this.containerEl.children[1] as HTMLElement;
     container.empty();
     container.classList.add("tidle-view-container");
@@ -78,7 +83,7 @@ class TidleView extends ItemView {
     container.appendChild(this.iframe);
   }
 
-  async onClose() {
+  onClose(): void {
     if (this.iframe) {
       this.iframe.src = "about:blank";
       this.iframe.remove();
