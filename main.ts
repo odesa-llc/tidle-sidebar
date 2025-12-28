@@ -19,7 +19,7 @@ export default class TidlePlugin extends Plugin {
     );
 
     const ribbonEl = this.addRibbonIcon("tidle-icon", "Open sidebar", () => {
-      void this.activateView().catch(console.error);
+      return this.activateView().catch(console.error);
     });
     ribbonEl.classList.add("tidle-ribbon-icon");
 
@@ -27,7 +27,7 @@ export default class TidlePlugin extends Plugin {
       id: "open-tidle",
       name: "Open sidebar",
       callback: () => {
-        void this.activateView().catch(console.error);
+        return this.activateView().catch(console.error);
       },
     });
   }
@@ -71,16 +71,15 @@ class TidleView extends ItemView {
   }
 
   onOpen(): void {
-    const container = this.containerEl.children[1] as HTMLElement;
-    container.empty();
-    container.classList.add("tidle-view-container");
+    this.contentEl.empty();
+    this.contentEl.classList.add("tidle-view-container");
 
     this.iframe = document.createElement("iframe");
     this.iframe.src = "https://tidle.app/main";
     this.iframe.title = "Tidle";
     this.iframe.classList.add("tidle-iframe");
 
-    container.appendChild(this.iframe);
+    this.contentEl.appendChild(this.iframe);
   }
 
   onClose(): void {
@@ -90,7 +89,6 @@ class TidleView extends ItemView {
       this.iframe = null;
     }
 
-    const container = this.containerEl.children[1] as HTMLElement;
-    container?.classList.remove("tidle-view-container");
+    this.contentEl.classList.remove("tidle-view-container");
   }
 }
