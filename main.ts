@@ -18,17 +18,20 @@ export default class TidlePlugin extends Plugin {
       `
     );
 
-    const ribbonEl = this.addRibbonIcon("tidle-icon", "Open sidebar", () => {
-      return this.activateView().catch(console.error);
-    });
+    // Use a shared handler to avoid any "floating promise" lint issues in callbacks.
+    const openSidebar = (): void => {
+      void this.activateView().catch((err: unknown) => {
+        console.error(err);
+      });
+    };
+
+    const ribbonEl = this.addRibbonIcon("tidle-icon", "Open sidebar", openSidebar);
     ribbonEl.classList.add("tidle-ribbon-icon");
 
     this.addCommand({
       id: "open-tidle",
       name: "Open sidebar",
-      callback: () => {
-        return this.activateView().catch(console.error);
-      },
+      callback: openSidebar,
     });
   }
 
@@ -46,6 +49,7 @@ export default class TidlePlugin extends Plugin {
 
     const leaf = this.app.workspace.getLeaf(true);
 
+    // setViewState returns a Promise and must be awaited to satisfy strict linting
     await leaf.setViewState({
       type: VIEW_TYPE_TIDLE,
       active: true,
