@@ -36,7 +36,9 @@ export default class TidlePlugin extends Plugin {
   }
 
   onunload(): void {
-    this.app.workspace.getLeavesOfType(VIEW_TYPE_TIDLE).forEach((leaf) => leaf.detach());
+    this.app.workspace.getLeavesOfType(VIEW_TYPE_TIDLE).forEach((leaf) => {
+      void leaf.detach();
+    });
   }
 
   private async activateView(): Promise<void> {
