@@ -18,7 +18,6 @@ export default class TidlePlugin extends Plugin {
       `
     );
 
-    // Use a shared handler to avoid any "floating promise" lint issues in callbacks.
     const openSidebar = (): void => {
       void this.activateView().catch((err: unknown) => {
         console.error(err);
@@ -37,7 +36,10 @@ export default class TidlePlugin extends Plugin {
 
   onunload(): void {
     this.app.workspace.getLeavesOfType(VIEW_TYPE_TIDLE).forEach((leaf) => {
-      void leaf.detach();
+      // Use Promise.resolve to satisfy strict rules whether detach() is void or Promise<void>
+      void Promise.resolve(leaf.detach()).catch((err: unknown) => {
+        console.error(err);
+      });
     });
   }
 
@@ -45,19 +47,18 @@ export default class TidlePlugin extends Plugin {
     const existingLeaves = this.app.workspace.getLeavesOfType(VIEW_TYPE_TIDLE);
 
     if (existingLeaves.length > 0) {
-      this.app.workspace.revealLeaf(existingLeaves[0]);
+      await this.app.workspace.revealLeaf(existingLeaves[0]);
       return;
     }
 
     const leaf = this.app.workspace.getLeaf(true);
 
-    // setViewState returns a Promise and must be awaited to satisfy strict linting
     await leaf.setViewState({
       type: VIEW_TYPE_TIDLE,
       active: true,
     });
 
-    this.app.workspace.revealLeaf(leaf);
+    await this.app.workspace.revealLeaf(leaf);
   }
 }
 
