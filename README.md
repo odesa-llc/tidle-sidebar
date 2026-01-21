@@ -53,15 +53,11 @@ Add subtasks, notes, and attachments to keep every task organized, detailed, and
 ### 3) Calendar preview
 Switch between week and month views and pick dates to visualize upcoming commitments.
 
-### 4) Apple widgets
-See Today at a glance. Widgets show your current task list, completion progress, and quick actions.<br />
-<img width="200" alt="Apple widgets" src="https://github.com/user-attachments/assets/4dd34e02-7a99-4b06-bdf7-f6aa5b2613e6" />
-
-### 5) Analytics dashboard
+### 4) Analytics dashboard
 Weekly completion scores, daily progress bars, and category breakdowns to spot trends and stay accountable.  
 <img width="200" alt="Analytics dashboard" src="https://github.com/user-attachments/assets/92e0df46-c064-4f10-8a45-5a7516de5774" />
 
-### 6) Workspace and settings panel
+### 5) Workspace and settings panel
 Separate work, personal, and study workspaces to organize tasks accordingly.
 
 ---
