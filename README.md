@@ -54,7 +54,7 @@ Add subtasks, notes, and attachments to keep every task organized, detailed, and
 Switch between week and month views and pick dates to visualize upcoming commitments.
 
 ### 4) Apple widgets
-See Today at a glance. Widgets show your current task list, completion progress, and quick actions. 
+See Today at a glance. Widgets show your current task list, completion progress, and quick actions.<br />
 <img width="200" alt="Apple widgets" src="https://github.com/user-attachments/assets/4dd34e02-7a99-4b06-bdf7-f6aa5b2613e6" />
 
 ### 5) Analytics dashboard
