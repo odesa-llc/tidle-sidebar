@@ -44,22 +44,22 @@ Tidle will open in a pane. You can keep it docked as a sidebar tab if you like.
 
 ### 1) Drag-and-drop
 Organize to-dos across sections (Todo, In Progress, Completed) with drag-and-drop control.  
-<img width="200" alt="Drag and drop" src="https://github.com/user-attachments/assets/5a6988fb-9a33-48cd-9c4b-e8211641c836" />
+<img width="200" alt="Drag and drop" src="https://github.com/user-attachments/assets/227971e1-9e03-4dff-96fa-fdedd7590e25" />
 
-### 2) Reminders
-Set timely alerts so important tasks never slip through.  
-<img width="200" alt="Reminders" src="https://github.com/user-attachments/assets/1e806d14-a015-4518-a786-6f7b8ce1b32e" />
-
-### 3) Subtasks, notes, attachments
+### 2) Subtasks, notes, attachments
 Add subtasks, notes, and attachments to keep every task organized, detailed, and easy to follow.  
-<img width="200" alt="Subtasks notes attachments" src="https://github.com/user-attachments/assets/dccdbceb-b74d-461e-ad55-c676d710a198" />
+<img width="200" alt="Subtasks notes attachments" src="https://github.com/user-attachments/assets/965230ba-5c87-42f3-859e-94ce4bb1f48c" />
 
-### 4) Calendar preview
+### 3) Calendar preview
 Switch between week and month views and pick dates to visualize upcoming commitments.
+
+### 4) Apple widgets
+See Today at a glance. Widgets show your current task list, completion progress, and quick actions so you can stay oriented throughout the day. 
+<img width="326" height="356" alt="image" src="https://github.com/user-attachments/assets/4dd34e02-7a99-4b06-bdf7-f6aa5b2613e6" />
 
 ### 5) Analytics dashboard
 Weekly completion scores, daily progress bars, and category breakdowns to spot trends and stay accountable.  
-<img width="200" alt="Analytics dashboard" src="https://github.com/user-attachments/assets/99a72eb0-bef5-49a4-9019-33fb4cdcae7b8ce1b32e" />
+<img width="200" alt="Analytics dashboard" src="https://github.com/user-attachments/assets/92e0df46-c064-4f10-8a45-5a7516de5774" />
 
 ### 6) Workspace and settings panel
 Separate work, personal, and study workspaces to organize tasks accordingly.
