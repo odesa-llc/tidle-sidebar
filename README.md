@@ -2,7 +2,7 @@
 
 Embeds the Tidle task manager inside Obsidian so you can manage tasks alongside your notes and other plugins.
 
-<img width="650" alt="tidle-sidebar-preview" src="https://github.com/user-attachments/assets/41d948fe-a928-43c6-98fa-f106d0fd0626" />
+<img width="650" alt="tidle-sidebar-preview"  src="https://github.com/user-attachments/assets/6ffd03c5-d725-41fd-bc78-9b0a8da25fac" />
 
 ## Features (Obsidian)
 
